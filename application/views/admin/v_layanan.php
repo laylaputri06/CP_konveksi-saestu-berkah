@@ -112,7 +112,7 @@
 
                             <div class="mb-3">
                                 <label class="form-label">Jam Operasional</label>
-                                <input type="text" name="jam_buka" class="form-control" value="<?= isset($konfig->jam_buka) ? $konfig->jam_buka : '' ?>">
+                                <input type="text" name="jam_operasional" class="form-control" value="<?= isset($konfig->jam_operasional) ? $konfig->jam_operasional : '' ?>">
                             </div>
 
                             <div class="mb-3">

@@ -51,13 +51,13 @@
         .filter-btn.active { background-color: #E0E7FF; color: #1a0380; font-weight: 700; border: 1px solid var(--active-blue); }
 
         /* CARD STYLE */
-        .product-card { background-color: var(--card-bg); border-radius: 15px; padding: 0; box-shadow: var(--product-shadow); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; width: 100%; transition: 0.3s; }
+        .product-card { position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; transition: 0.3s; }
         .product-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
         .card-small { height: 250px; margin-bottom: 24px; }
         .card-large { height: 524px; margin-bottom: 24px; } 
         .card-grid  { height: 350px; } 
-        .product-img { max-width: 100%; max-height: 100%; object-fit: cover; z-index: 2; }
-        .watermark { position: absolute; top: 20px; left: 20px; z-index: 1; display: flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.8); padding: 5px 10px; border-radius: 20px; }
+        .product-img { max-width: 100%; max-height: 100%; object-fit: cover; z-index: 1; }
+        .watermark { position: absolute; top: 20px; left: 20px; z-index: 10; display: flex; align-items: center; gap: 8px; padding: 5px 10px; border-radius: 20px; }
         .watermark img { height: 24px; }
         .watermark-text { color: #1a0380; line-height: 1.1; font-weight: 800; font-size: 0.75rem; }
         .action-container { position: absolute; bottom: 20px; right: 20px; display: flex; gap: 12px; z-index: 3; }
@@ -84,7 +84,7 @@
         
         .modal-footer-custom { display: flex; justify-content: flex-end; gap: 15px; margin-top: 20px; }
         .btn-batal { background-color: #E5E7EB; color: #333; border: none; padding: 8px 30px; border-radius: 6px; font-weight: 600; }
-        .btn-simpan { background-color: var(--active-blue); color: white; border: none; padding: 8px 30px; border-radius: 6px; font-weight: 600; }
+        .btn-simpan { background-color: var(--active-blue); color: whit e; border: none; padding: 8px 30px; border-radius: 6px; font-weight: 600; }
 
         /* Modal Hapus Khusus */
         .modal-hapus-icon { font-size: 4rem; color: var(--danger-red); margin-bottom: 15px; display: block; text-align: center; }
@@ -215,10 +215,10 @@
                         <?php foreach($products as $p): ?>
                         <div class="col-md-6">
                             <div class="product-card card-grid"> 
-                                <div class="watermark">
+                                <!-- <div class="watermark">
                                     <img src="<?= base_url('assets/images/logo biru.png') ?>" alt="Logo">
                                     <div class="watermark-text"><div>Konveksi</div><div>Saestu Berkah</div></div>
-                                </div>
+                                </div> -->
                                 <img src="<?= base_url('assets/images/produk/' . $kategori_aktif . '/' . $p['file_name']) ?>" class="product-img" alt="Produk">
                                 
                                 <div class="action-container">

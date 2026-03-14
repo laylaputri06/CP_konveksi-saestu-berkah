@@ -123,9 +123,19 @@
                 <div class="p-5 bg-white shadow-sm rounded h-100">
                     <h4 class="fw-bold text-center mb-3">Misi</h4>
                     <ul class="text-muted list-unstyled ps-4">
-                        <li class="mb-2">1. Membuat produk dengan bahan bermutu tinggi dengan jahitan berkualitas.</li>
-                        <li class="mb-2">2. Memberikan pelayanan terbaik kepada mitra dan konsumen, mulai dari awal hingga purna jual.</li>
-                        <li class="mb-2">3. Menjadi perusahaan dengan tingkat inovasi tinggi dan memberikan garansi produk sesuai pesanan.</li>
+                        <?php 
+                            $misi_text = $visi_misi['deskripsi'] ?? '';
+                            $misi_array = explode("\n", $misi_text);
+                            
+                            $count = 1;
+                            foreach($misi_array as $m): 
+                                if(!empty(trim($m))): 
+                            ?>
+                                <li class="mb-2"><strong><?= $count++ ?>.</strong> <?= trim($m); ?></li>
+                            <?php 
+                                endif; 
+                            endforeach; 
+                            ?>
                     </ul>
                 </div>
             </div>
@@ -137,7 +147,7 @@
     <div class="container">
         <div class="text-center mb-5">
             <h2 class="fw-bold">Partner Kami</h2>
-            <p class="text-muted">Telah bekerja sama dengan lebih dari 20+ instansi, sekolah, dan komunitas.</p>
+            <p class="text-muted">Telah bekerja sama dengan lebih dari 30+ instansi, sekolah, dan komunitas.</p>
         </div>
 
         <?php 
@@ -185,14 +195,14 @@
         .partner-item img:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.1); }
 
         /* Animasi ke Kanan */
-        .partner-track-right { display: flex; animation: scrollRight 50s linear infinite; }
+        .partner-track-right { display: flex; animation: scrollRight 70s linear infinite; }
         @keyframes scrollRight {
             0% { transform: translateX(calc(-200px * <?= count($baris[0]); ?>)); }
             100% { transform: translateX(0); }
         }
 
         /* Animasi ke Kiri */
-        .partner-track-left { display: flex; animation: scrollLeft 50s linear infinite; }
+        .partner-track-left { display: flex; animation: scrollLeft 70s linear infinite; }
         @keyframes scrollLeft {
             0% { transform: translateX(0); }
             100% { transform: translateX(calc(-200px * <?= count($baris[1]); ?>)); }

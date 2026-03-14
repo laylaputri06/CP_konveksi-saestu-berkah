@@ -255,10 +255,6 @@
                     <i class="bi bi-calendar3 me-2"></i> <?= isset($tanggal) ? $tanggal : date('l, d/m/Y'); ?>
                 </div>
             </div>
-            <div class="user-profile">
-                <i class="bi bi-person-circle fs-2"></i>
-                <span><?= strtoupper($nama_admin); ?></span>
-            </div>
         </div>
 
         <div class="content-wrapper">

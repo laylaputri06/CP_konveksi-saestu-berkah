@@ -44,13 +44,21 @@
         .pos-right-3 { grid-column: 2 / 3; grid-row: 3 / 4; }
 
         /* Card Design Umum */
-        .card-product { border: none; background: transparent; cursor: pointer; transition: transform 0.3s; height: 100%; width: 100%; display: flex; flex-direction: column; }
-        .card-product:hover { transform: translateY(-5px); }
+        .card-product { 
+            border: none; 
+            background: transparent; 
+            cursor: pointer; transition: 
+            transform 0.3s; 
+            height: 100%; 
+            width: 100%; 
+            display: flex; 
+            flex-direction: column; 
+        }
+        .card-product:hover { 
+            transform: translateY(-5px); 
+        }
 
         .img-box {
-            background-color: var(--card-bg); 
-            border-radius: 20px; 
-            padding: 20px; /* Beri sedikit ruang agar gambar tidak menempel ke tepi */
             display: flex; 
             align-items: center;      /* Rata tengah vertikal */
             justify-content: center;   /* Rata tengah horizontal */
@@ -68,13 +76,19 @@
 
         /* STYLE KHUSUS GALERI (2 KOLOM) */
         .gallery-card {
-            height: 350px; /* Tinggi kotak galeri */
+            height: 400px; /* Tinggi kotak galeri */
         }
 
         /* WATERMARK STYLE */
         .watermark {
-            position: absolute; top: 20px; left: 25px; z-index: 10;
-            display: flex; align-items: center; gap: 8px;
+            position: absolute; 
+            top: 30px; 
+            left: 25px; 
+            z-index: 10;
+            display: flex; 
+            align-items: center; 
+            gap: 8px;
+            mix-blend-mode: multiply;
         }
         .watermark img { height: 28px !important; width: auto !important; object-fit: contain; } 
         .watermark-text {
@@ -104,7 +118,6 @@
         <nav>
             <a href="<?= base_url('produk/hit_and_view/kaos_polos') ?>" class="nav-link-custom <?= ($kategori_aktif == 'kaos_polos') ? 'active' : '' ?>">Seragam Kaos polos</a>
             <a href="<?= base_url('produk/hit_and_view/kaos_polo') ?>" class="nav-link-custom <?= ($kategori_aktif == 'kaos_polo') ? 'active' : '' ?>">Seragam Polo</a>
-            <!-- <a href="<?= base_url('produk/index/jaket') ?>" class="nav-link-custom <?= ($kategori_aktif == 'jaket') ? 'active' : '' ?>">Seragam Jaket</a> -->
             <a href="<?= base_url('produk/hit_and_view/kemeja_dan_PDH') ?>" class="nav-link-custom <?= ($kategori_aktif == 'kemeja_dan_PDH') ? 'active' : '' ?>">Seragam Kemeja & PDH</a>
             <a href="<?= base_url('produk/hit_and_view/rompi') ?>" class="nav-link-custom <?= ($kategori_aktif == 'rompi') ? 'active' : '' ?>">Seragam Rompi</a>
             <div style="height: 20px;"></div>
@@ -124,13 +137,13 @@
                 <?php foreach($produk_list as $p): ?>
                 <div class="col-md-6"> <div class="card-product gallery-card">
                         <div class="img-box">
-                            <div class="watermark">
+                            <!-- <div class="watermark">
                                 <img src="<?= base_url('assets/images/logo biru.png') ?>" alt="Logo">
                                 <div class="watermark-text">
                                     <div>Konveksi</div>
                                     <div>Saestu Berkah</div>
                                 </div>
-                            </div>
+                            </div> -->
                             <img src="<?= base_url('assets/images/produk/' . $kategori_aktif . '/' . $p['file_name']) ?>" 
                                 class="product-img" 
                                 alt="Galeri Pelanggan"

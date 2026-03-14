@@ -185,7 +185,7 @@ class Admin extends CI_Controller {
 
         $config['upload_path']   = $path;
         $config['allowed_types'] = 'jpg|png';
-        $config['file_name']     = $nomor_file; 
+        $config['file_name']     = $nomor_file . '_' . time(); 
         $config['overwrite']     = TRUE;
 
         $this->load->library('upload');
@@ -459,7 +459,7 @@ class Admin extends CI_Controller {
             'no_wa_1'         => '62' . ltrim($wa1, '0'), // Menghapus angka 0 di depan jika ada, lalu tambah 62
             'no_wa_2'         => '62' . ltrim($wa2, '0'),
             'email'           => $this->input->post('email'),
-            'jam_operasional' => $this->input->post('jam_buka'),
+            'jam_operasional' => $this->input->post('jam_operasional'),
             'alamat'          => $this->input->post('alamat'),
             'instagram'       => $this->input->post('instagram'),
             'tiktok'          => $this->input->post('tiktok'),
