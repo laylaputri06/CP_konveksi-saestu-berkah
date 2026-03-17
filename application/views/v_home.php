@@ -101,7 +101,7 @@
             </div>
             <div class="col-md-2"></div> 
             <div class="col-md-5 text-end">
-                 <img src="<?= base_url('assets/images/foto_tim.png') ?>" class="img-fluid rounded shadow mb-3" alt="Team">
+                <img src="<?= base_url('assets/images/' . $about['foto']) ?>" class="img-fluid rounded shadow mb-3" alt="Team">
             </div>
         </div>
     </div>

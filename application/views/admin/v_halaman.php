@@ -6,12 +6,12 @@
     <title><?= $title; ?></title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 
     <style>
         :root {
-            --primary-blue: #1a0380; 
+            --primary-blue: #2005a2; 
             --active-blue: #304FFE;
             --page-bg: #FFFFFF;       
             --section-bg: #F0F8FF;    
@@ -160,7 +160,7 @@
                         </div>
                     </div>
                     <div class="col-md-5">
-                        <img src="<?= base_url('assets/images/' . $about['foto']) ?>" class="welcome-img" alt="About Image" id="prev-about">
+                        <img src="<?= base_url('assets/images/' . $about['foto']) ?>" class="welcome-img" alt="About Image">
                     </div>
                 </div>
                 <a class="edit-link" data-bs-toggle="modal" data-bs-target="#modalEditAbout">
