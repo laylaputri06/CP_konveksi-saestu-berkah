@@ -15,12 +15,6 @@
 
             <div class="col-md-6">
                 <div class="d-flex align-items-center justify-content-center justify-content-md-end gap-4">
-                    
-                    <div class="d-flex gap-3 align-items-center">
-                        <a href="https://wa.me/628xxxx" class="text-white text-decoration-none fs-4"><i class="bi bi-whatsapp"></i></a>
-                        <a href="https://www.tiktok.com/@berkah.konveksiku" class="text-white text-decoration-none fs-4"><i class="bi bi-tiktok"></i></a>
-                        <a href="https://www.instagram.com/berkah.konveksiku/" class="text-white text-decoration-none fs-4"><i class="bi bi-instagram"></i></a>
-                    </div>
 
                     <div class="d-flex align-items-center border-start border-2 border-white ps-3" style="height: 40px;">
                         <div class="lh-1 text-start">

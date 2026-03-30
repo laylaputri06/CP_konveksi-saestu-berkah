@@ -26,7 +26,7 @@
         
         <div class="row align-items-center mb-4">
             <div class="col-md-6">
-                <h2 class="fw-bold mb-1">Produk & Layanan</h2>
+                <h2 class="fw-bold mb-1">Produk & Galeri Pelanggan</h2>
                 <p class="text-muted mb-0">Kategori Produk</p>
             </div>
             <div class="col-md-6 text-md-end mt-3 mt-md-0">
@@ -211,7 +211,7 @@
 </section>
 
 <section class="py-5 position-relative" 
-         style="background: url('<?= base_url('assets/images/foto line.jpg') ?>') no-repeat center center/cover;">
+         style="background: url('<?= base_url('assets/images/CTA_website.jpg') ?>') no-repeat center center/cover;">
     
     <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
     

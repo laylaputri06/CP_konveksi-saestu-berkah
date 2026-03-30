@@ -57,7 +57,7 @@
             font-weight: 700;
             text-decoration: none;
             font-size: 0.9rem;
-            cursor: pointer; /* Ubah kursor jadi pointer agar terlihat bisa diklik */
+            cursor: pointer;
         }
         .edit-link i { margin-left: 5px; }
         .edit-link:hover { text-decoration: underline; }
