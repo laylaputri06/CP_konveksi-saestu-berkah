@@ -269,8 +269,13 @@
                 </div>
             <?php endif; ?>
 
-            <h2 class="section-title">Riwayat</h2>
-
+            <div class="header-section" style="display: flex; justify-content: space-between; align-items: center;">
+                <h2 class="section-title">Riwayat</h2>
+                <a href="<?= base_url('admin/dashboard') ?>" class="btn-tutup" 
+                style="padding: 15px 35px; background-color: #ecf0f3; border-radius: 25px; text-decoration: none;">
+                    Tutup
+                </a>
+            </div>
             <div class="table-responsive">
                 <table class="table-custom">
                     <thead>
@@ -312,11 +317,7 @@
                 </table>
             </div>
 
-            <div class="action-buttons">
-                <a href="<?= base_url('admin/dashboard') ?>" class="btn-tutup">
-                    Tutup
-                </a>
-            </div>
+            
 
         </div> 
 

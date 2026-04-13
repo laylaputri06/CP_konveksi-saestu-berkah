@@ -95,29 +95,29 @@
                             <div class="input-group mb-2">
                                 <span class="input-group-text">+62</span>
                                 <input type="number" name="no_wa_1" class="form-control mb-0" placeholder="857xxxx" 
-                                       value="<?= isset($konfig->no_wa_1) ? (substr($konfig->no_wa_1, 0, 2) == '62' ? substr($konfig->no_wa_1, 2) : $konfig->no_wa_1) : '' ?>">
+                                       value="<?= isset($konfig->no_wa_1) ? (substr($konfig->no_wa_1, 0, 2) == '62' ? substr($konfig->no_wa_1, 2) : $konfig->no_wa_1) : '' ?>" required>
                             </div>
 
                             <label class="form-label">WhatsApp Admin 2 (Cadangan)</label>
                             <div class="input-group mb-2">
                                 <span class="input-group-text">+62</span>
                                 <input type="number" name="no_wa_2" class="form-control mb-0" placeholder="812xxxx" 
-                                       value="<?= isset($konfig->no_wa_2) ? (substr($konfig->no_wa_2, 0, 2) == '62' ? substr($konfig->no_wa_2, 2) : $konfig->no_wa_2) : '' ?>">
+                                       value="<?= isset($konfig->no_wa_2) ? (substr($konfig->no_wa_2, 0, 2) == '62' ? substr($konfig->no_wa_2, 2) : $konfig->no_wa_2) : '' ?>" required>
                             </div>
 
                             <div class="mb-3 mt-4">
                                 <label class="form-label">Email Resmi</label>
-                                <input type="email" name="email" class="form-control" value="<?= isset($konfig->email) ? $konfig->email : '' ?>">
+                                <input type="email" name="email" class="form-control" value="<?= isset($konfig->email) ? $konfig->email : '' ?>" required>
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Jam Operasional</label>
-                                <input type="text" name="jam_operasional" class="form-control" value="<?= isset($konfig->jam_operasional) ? $konfig->jam_operasional : '' ?>">
+                                <input type="text" name="jam_operasional" class="form-control" value="<?= isset($konfig->jam_operasional) ? $konfig->jam_operasional : '' ?>" required>
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label">Alamat Lengkap</label>
-                                <textarea name="alamat" class="form-control" rows="4"><?= isset($konfig->alamat) ? $konfig->alamat : '' ?></textarea>
+                                <textarea name="alamat" class="form-control" rows="4" required><?= isset($konfig->alamat) ? $konfig->alamat : '' ?></textarea>
                             </div>
                         </div>
 
@@ -128,29 +128,29 @@
 
                             <div class="mb-3">
                                 <label class="form-label"><i class="bi bi-instagram text-danger me-2"></i> Link Instagram</label>
-                                <input type="text" name="instagram" class="form-control" value="<?= isset($konfig->instagram) ? $konfig->instagram : '' ?>">
+                                <input type="text" name="instagram" class="form-control" value="<?= isset($konfig->instagram) ? $konfig->instagram : '' ?>" required>
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label"><i class="bi bi-tiktok text-dark me-2"></i> Link TikTok</label>
-                                <input type="text" name="tiktok" class="form-control" value="<?= isset($konfig->tiktok) ? $konfig->tiktok : '' ?>">
+                                <input type="text" name="tiktok" class="form-control" value="<?= isset($konfig->tiktok) ? $konfig->tiktok : '' ?>" required>
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label"><i class="bi bi-facebook text-primary me-2"></i> Link Facebook</label>
-                                <input type="text" name="facebook" class="form-control" value="<?= isset($konfig->facebook) ? $konfig->facebook : '' ?>">
+                                <input type="text" name="facebook" class="form-control" value="<?= isset($konfig->facebook) ? $konfig->facebook : '' ?>" required>
                             </div>
 
                             <div class="mb-3">
                                 <label class="form-label"><i class="bi bi-youtube text-danger me-2"></i> Link YouTube</label>
-                                <input type="text" name="youtube" class="form-control" value="<?= isset($konfig->youtube) ? $konfig->youtube : '' ?>">
+                                <input type="text" name="youtube" class="form-control" value="<?= isset($konfig->youtube) ? $konfig->youtube : '' ?>" required >
                             </div>
                             
                             <div class="mb-3">
                                 <label class="form-label">
                                     <i class="bi bi-briefcase-fill text-warning me-2"></i> Link Mbizmarket (E-Procurement)
                                 </label>
-                                <input type="text" name="mbizmarket" class="form-control" placeholder="https://www.mbizmarket.co.id/..." value="<?= isset($konfig->mbizmarket) ? $konfig->mbizmarket : '' ?>">
+                                <input type="text" name="mbizmarket" class="form-control" placeholder="https://www.mbizmarket.co.id/..." value="<?= isset($konfig->mbizmarket) ? $konfig->mbizmarket : '' ?>" required>
                             </div>
                         </div>
                     </div>

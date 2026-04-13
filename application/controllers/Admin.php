@@ -80,76 +80,76 @@ class Admin extends CI_Controller {
         $this->load->view('admin/v_riwayat', $data);
     }
 
-    public function export_riwayat_csv()
-    {
-        // Pastikan helper download dimuat
-        $this->load->helper('download'); 
+    // public function export_riwayat_csv()
+    // {
+    //     // Pastikan helper download dimuat
+    //     $this->load->helper('download'); 
 
-        $riwayat = $this->M_dashboard->get_all_activities();
+    //     $riwayat = $this->M_dashboard->get_all_activities();
 
-        if (empty($riwayat)) {
-            $this->session->set_flashdata('error', 'Tidak ada riwayat aktivitas untuk diunduh.');
-            redirect('admin/riwayat');
-        }
+    //     if (empty($riwayat)) {
+    //         $this->session->set_flashdata('error', 'Tidak ada riwayat aktivitas untuk diunduh.');
+    //         redirect('admin/riwayat');
+    //     }
 
-        // Siapkan Header dan Data CSV
-        $csv_output = '';
+    //     // Siapkan Header dan Data CSV
+    //     $csv_output = '';
         
-        // Header (Kolom)
-        $column_names = array_keys($riwayat[0]);
-        $csv_output .= implode(';', $column_names) . "\n";
+    //     // Header (Kolom)
+    //     $column_names = array_keys($riwayat[0]);
+    //     $csv_output .= implode(';', $column_names) . "\n";
         
-        // Isi Data
-        foreach ($riwayat as $row) {
-            $csv_output .= implode(';', array_values($row)) . "\n";
-        }
+    //     // Isi Data
+    //     foreach ($riwayat as $row) {
+    //         $csv_output .= implode(';', array_values($row)) . "\n";
+    //     }
         
-        // Unduh File
-        $filename = 'riwayat_aktivitas_' . date('Ymd_His') . '.csv';
-        force_download($filename, $csv_output);
-    }
+    //     // Unduh File
+    //     $filename = 'riwayat_aktivitas_' . date('Ymd_His') . '.csv';
+    //     force_download($filename, $csv_output);
+    // }
 
 
     // --- FUNGSI PRODUK (LOGIKA KATEGORI + 45 DATA) ---
     public function produk($kategori = null) // Ubah default menjadi null
-{
-    $this->load->model('M_dashboard');
-    $data['title'] = "Kelola Produk";
-    $data['tanggal'] = date('l, d F Y');
-    $data['nama_admin'] = $this->session->userdata('nama_admin');
+    {
+        $this->load->model('M_dashboard');
+        $data['title'] = "Kelola Produk";
+        $data['tanggal'] = date('l, d F Y');
+        $data['nama_admin'] = $this->session->userdata('nama_admin');
 
-    if ($kategori === null) {
-        // --- TAMPILAN RINGKASAN (DASHBOARD PRODUK) ---
-        $data['is_dashboard'] = true;
-        $data['kategori_aktif'] = 'semua';
-        $data['judul_kategori'] = 'Ringkasan Produk';
+        if ($kategori === null) {
+            // --- TAMPILAN RINGKASAN (DASHBOARD PRODUK) ---
+            $data['is_dashboard'] = true;
+            $data['kategori_aktif'] = 'semua';
+            $data['judul_kategori'] = 'Ringkasan Produk';
 
-        // Ambil data terbatas (misal: 5 item) untuk setiap kategori
-        $data['preview_kemeja'] = $this->M_produk->get_produk_limit('kemeja_dan_PDH', 5);
-        $data['preview_polo']   = $this->M_produk->get_produk_limit('kaos_polo', 5);
-        $data['preview_polos']  = $this->M_produk->get_produk_limit('kaos_polos', 5);
-        $data['preview_rompi']  = $this->M_produk->get_produk_limit('rompi', 5);
-        $data['preview_galeri'] = $this->M_produk->get_produk_limit('galeri', 4); // Galeri biasanya 4 (2x2)
-        
-        $data['products'] = []; // Kosongkan karena menggunakan preview masing-masing
-    } else {
-        // --- TAMPILAN DETAIL KATEGORI (KODE LAMA ANDA) ---
-        $data['is_dashboard'] = false;
-        $data['kategori_aktif'] = $kategori;
-        $data['products'] = $this->M_produk->get_produk_with_images($kategori);
+            // Ambil data terbatas (misal: 5 item) untuk setiap kategori
+            $data['preview_kemeja'] = $this->M_produk->get_produk_limit('kemeja_dan_PDH', 5);
+            $data['preview_polo']   = $this->M_produk->get_produk_limit('kaos_polo', 5);
+            $data['preview_polos']  = $this->M_produk->get_produk_limit('kaos_polos', 5);
+            $data['preview_rompi']  = $this->M_produk->get_produk_limit('rompi', 5);
+            $data['preview_galeri'] = $this->M_produk->get_produk_limit('galeri', 4); // Galeri biasanya 4 (2x2)
+            
+            $data['products'] = []; // Kosongkan karena menggunakan preview masing-masing
+        } else {
+            // --- TAMPILAN DETAIL KATEGORI (KODE LAMA ANDA) ---
+            $data['is_dashboard'] = false;
+            $data['kategori_aktif'] = $kategori;
+            $data['products'] = $this->M_produk->get_produk_with_images($kategori);
 
-        $judul = [
-            'kemeja_dan_PDH' => 'Kemeja dan PDH',
-            'kaos_polo'      => 'Kaos Polo',
-            'kaos_polos'     => 'Kaos Polos',
-            'rompi'          => 'Rompi',    
-            'galeri'         => 'Galeri Pelanggan'
-        ];
-        $data['judul_kategori'] = $judul[$kategori] ?? 'Produk';
+            $judul = [
+                'kemeja_dan_PDH' => 'Kemeja dan PDH',
+                'kaos_polo'      => 'Kaos Polo',
+                'kaos_polos'     => 'Kaos Polos',
+                'rompi'          => 'Rompi',    
+                'galeri'         => 'Galeri Pelanggan'
+            ];
+            $data['judul_kategori'] = $judul[$kategori] ?? 'Produk';
+        }
+
+        $this->load->view('admin/v_produk', $data);
     }
-
-    $this->load->view('admin/v_produk', $data);
-}
 
     public function save_produk() {
         $this->load->model('M_produk');
@@ -217,7 +217,7 @@ class Admin extends CI_Controller {
     }
 
     // hapus produk
-    public function hapus_produk($id, $kategori)
+    public function delete_produk($id, $kategori)
     {
         // 1. Ambil data produk sebelum dihapus untuk keperluan riwayat
         $produk = $this->db->get_where('tb_produk', ['id' => $id])->row_array();
