@@ -55,8 +55,8 @@
         .product-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
         .card-small { height: 250px; margin-bottom: 24px; }
         .card-large { height: 524px; margin-bottom: 24px; } 
-        .card-grid  { height: 350px; } 
-        .product-img { max-width: 100%; max-height: 100%; object-fit: cover; z-index: 1; }
+        /* .card-grid  { height: 350px; margin-bottom: 24px; }  */
+        .product-img { max-width: 100%; max-height: 100%; object-fe6it: cover; z-index: 1; }
         .watermark { position: absolute; top: 20px; left: 20px; z-index: 10; display: flex; align-items: center; gap: 8px; padding: 5px 10px; border-radius: 20px; }
         .watermark img { height: 24px; }
         .watermark-text { color: #1a0380; line-height: 1.1; font-weight: 800; font-size: 0.75rem; }
@@ -214,11 +214,7 @@
                     <div class="row g-4">
                         <?php foreach($products as $p): ?>
                         <div class="col-md-6">
-                            <div class="product-card card-grid"> 
-                                <!-- <div class="watermark">
-                                    <img src="<?= base_url('assets/images/logo biru.png') ?>" alt="Logo">
-                                    <div class="watermark-text"><div>Konveksi</div><div>Saestu Berkah</div></div>
-                                </div> -->
+                            <div class="product-card card-small"> 
                                 <img src="<?= base_url('assets/images/produk/' . $kategori_aktif . '/' . $p['file_name']) ?>" class="product-img" alt="Produk">
                                 
                                 <div class="action-container">

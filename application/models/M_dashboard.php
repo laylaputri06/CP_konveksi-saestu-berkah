@@ -83,7 +83,7 @@ class M_dashboard extends CI_Model {
         return $this->db->insert('tb_riwayat_aktivitas', $data);
     }
 
-    // --- Semua Riwayat Aktivitas (Untuk CSV) ---
+    // --- Semua Riwayat Aktivitas ---
     public function get_all_activities()
     {
         // Ambil semua data dari tabel riwayat

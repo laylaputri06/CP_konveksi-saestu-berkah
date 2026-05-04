@@ -272,7 +272,7 @@
             <div class="header-section" style="display: flex; justify-content: space-between; align-items: center;">
                 <h2 class="section-title">Riwayat</h2>
                 <a href="<?= base_url('admin/dashboard') ?>" class="btn-tutup" 
-                style="padding: 15px 35px; background-color: #ecf0f3; border-radius: 25px; text-decoration: none;">
+                style="padding: 13px 35px; background-color: #ecf0f3; border-radius: 25px; text-decoration: none; display: inline-block; margin-bottom: 20px;">
                     Tutup
                 </a>
             </div>

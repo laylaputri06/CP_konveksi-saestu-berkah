@@ -80,35 +80,6 @@ class Admin extends CI_Controller {
         $this->load->view('admin/v_riwayat', $data);
     }
 
-    // public function export_riwayat_csv()
-    // {
-    //     // Pastikan helper download dimuat
-    //     $this->load->helper('download'); 
-
-    //     $riwayat = $this->M_dashboard->get_all_activities();
-
-    //     if (empty($riwayat)) {
-    //         $this->session->set_flashdata('error', 'Tidak ada riwayat aktivitas untuk diunduh.');
-    //         redirect('admin/riwayat');
-    //     }
-
-    //     // Siapkan Header dan Data CSV
-    //     $csv_output = '';
-        
-    //     // Header (Kolom)
-    //     $column_names = array_keys($riwayat[0]);
-    //     $csv_output .= implode(';', $column_names) . "\n";
-        
-    //     // Isi Data
-    //     foreach ($riwayat as $row) {
-    //         $csv_output .= implode(';', array_values($row)) . "\n";
-    //     }
-        
-    //     // Unduh File
-    //     $filename = 'riwayat_aktivitas_' . date('Ymd_His') . '.csv';
-    //     force_download($filename, $csv_output);
-    // }
-
 
     // --- FUNGSI PRODUK (LOGIKA KATEGORI + 45 DATA) ---
     public function produk($kategori = null) // Ubah default menjadi null
