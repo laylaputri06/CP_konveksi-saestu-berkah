@@ -195,14 +195,14 @@
         .partner-item img:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.1); }
 
         /* Animasi ke Kanan */
-        .partner-track-right { display: flex; animation: scrollRight 70s linear infinite; }
+        .partner-track-right { display: flex; animation: scrollRight 40s linear infinite; }
         @keyframes scrollRight {
             0% { transform: translateX(calc(-200px * <?= count($baris[0]); ?>)); }
             100% { transform: translateX(0); }
         }
 
         /* Animasi ke Kiri */
-        .partner-track-left { display: flex; animation: scrollLeft 70s linear infinite; }
+        .partner-track-left { display: flex; animation: scrollLeft 40s linear infinite; }
         @keyframes scrollLeft {
             0% { transform: translateX(0); }
             100% { transform: translateX(calc(-200px * <?= count($baris[1]); ?>)); }

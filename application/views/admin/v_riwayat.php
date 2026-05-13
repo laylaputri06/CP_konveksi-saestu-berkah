@@ -11,7 +11,7 @@
 
     <style>
         :root {
-            --primary-blue: #1a0380; 
+            --primary-blue: #2005a2; 
             --page-bg: #FFFFFF;       
             --card-bg: #EEF8FF;       
             --header-table-bg: #CFD8EF; /* Warna Header Tabel sesuai gambar */
@@ -237,9 +237,9 @@
 
         <nav>
             <a href="<?= base_url('admin/dashboard') ?>" class="nav-link active">DASHBOARD</a>
-            <a href="#" class="nav-link">PRODUK</a>
-            <a href="#" class="nav-link">HALAMAN</a>
-            <a href="#" class="nav-link">LAYANAN</a>
+            <a href="<?= base_url('admin/produk') ?>" class="nav-link">PRODUK</a>
+            <a href="<?= base_url('admin/halaman') ?>" class="nav-link">HALAMAN</a>
+            <a href="<?= base_url('admin/layanan') ?>" class="nav-link">LAYANAN</a>
         </nav>
 
         <a href="<?= base_url('auth/logout') ?>" class="logout-btn">
